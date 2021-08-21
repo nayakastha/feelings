@@ -4,19 +4,12 @@
   "description": "A discord bot to help people to calm down and relax",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nayakastha/feelings.git"
-  },
+    "start": "node index.js",
+    "devStart": "nodemon index.js"
+  },  
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nayakastha/feelings/issues"
-  },
-  "homepage": "https://github.com/nayakastha/feelings#readme",
+  "license": "ISC",  
   "dependencies": {
     "discord.js": "^13.1.0",
     "dotenv": "^10.0.0",
