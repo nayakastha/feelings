@@ -17,9 +17,9 @@ Feelings is a discord bot that helps people to calm down and relax.
 Since 2013, Millenials have seen a 47% increase in major- depression diagnoses. The overall rate increased from 3% to 4.4% among 18-34 years old. The reasons are not bounded, nor are they instant, but it's observed that people between the age limit 18-34 are hit by failures in their lives(it may be a career, Relationship, family problems, etc.). They lack self-motivation at the end and lose hope in their life; this gives way to depression. Thus, through our discord bot, we wish to give guidance to handle all such circumstances by motivating them and presenting examples of others. Through our bot, people can share their failures and success stories in person. This would build a strong community of motivated people who could combat life challenges and reach the pinnacle. Failure is not something to be ashamed of. We let you share your failures with the world and find relevant solutions. 
 
 ## Our BOT & Solution
-<br> <img src="pic1.jpegg" width="400" height="300" >
-<img src= "pic2.jpeg" width="300" height="300" >
-<img src="pic3.jpeg" width="300" height="300" >
+<br> <img src="pic1.jpeg" width="500" height="400" >
+<img src= "pic2.jpeg" width="500" height="400" >
+<img src="pic3.jpeg" width="500" height="400" >
 
 
 ## Built With
