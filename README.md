@@ -24,9 +24,9 @@ Since 2013, Millenials have seen a 47% increase in major- depression diagnoses. 
 
 ## Built With
 We built this bot using the documentation of discord.js. A lot of our functionalities are hard-coded in javascript, which is the heart of this project. We spent hours training the bot so that all the commands given by the user could be executed effectively. 
-<br> <img src="https://github.com/prachi237/StarHacks/blob/main/Screenshot%20(2).png" width="300" height="300" >
-<img src= "https://github.com/prachi237/StarHacks/blob/main/Screenshot%20(5).png" width="300" height="300" >
-<img src="https://github.com/prachi237/StarHacks/blob/main/Screenshot%20(3).png" width="300" height="300" >
+<br> <img src="Screenshot (114).png" width="400" height="300" >
+<img src= "https://github.com/prachi237/feelings/blob/main/Screenshot%20(115).png" width="400" height="300" >
+<img src="https://github.com/prachi237/feelings/blob/main/Screenshot%20(116).png" width="400" height="300" >
 
 ## What It does
 Since most of the work is happening on discord nowadays, people usually need some way out when stress builds. That's when our bot comes to the rescue. The Quandry of Feelings is a project that aims to input how the user is feeling and output an affirmation or words of encouragement. It also gives the user a breathing exercise; users can send a hug gif to each other and lift their spirits. This bot predominantly runs on javascript. Using that as our base language, we have written the various functionalities required for the smooth functioning of all the commands to be executed.
