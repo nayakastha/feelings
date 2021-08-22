@@ -7,7 +7,7 @@ module.exports = async function(tag, guild, channel) {
       time = new Date(),
       { MessageEmbed, MessageAttachment } = require('discord.js');
 
-      const file = new MessageAttachment('../assets/feelings.png');
+      const file = new MessageAttachment('https://github.com/nayakastha/feelings/blob/main/assets/feelings.png');
 
       console.log('\x1b[32m%s\x1b[0m', `${time}:\n${guild}:\n${tag} Help command success\n`);
       // channel.send('hello this is the help command');
