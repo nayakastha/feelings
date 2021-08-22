@@ -7,11 +7,15 @@ module.exports = async function(tag, guild, channel) {
       time = new Date();
 
       console.log('\x1b[32m%s\x1b[0m', `${time}:\n${guild}:\n${tag} Encourage command success\n`);
-      // channel.send('hello this is the encouragement command');
+     
       const messages = [
-         'You are a blooming flower',
-         'When times are tough, never stop',
-         'You are the most loved and appreciated person in this world',
+        'You are a blooming flower',
+        'When times are tough, never stop',
+        'You are the most loved and appreciated person in this world',
+        'Courage, dear heart.',
+        'In the middle of difficulty lies opportunity.',
+        'It doesn’t matter how slow you go as long as you don’t stop.',
+        'Believe you can and you’re halfway there.',        
         ];
       const rnd = Math.floor(Math.random() * messages.length);
       channel.send(messages[rnd]);

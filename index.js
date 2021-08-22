@@ -5,10 +5,11 @@ const botBE = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_M
 
 //Importing the discord library and meta data and initialising a botBE
 const admin = require('./commands/admin.js'),
-  breathe = require('./commands/breathe');
-  encourage = require('./commands/encourage');
-  help = require('./commands/help');
-  hug = require('./commands/hug');
+  breathe = require('./commands/breathe.js'),
+  encourage = require('./commands/encourage.js'),
+  count = require('./commands/count.js'),
+  help = require('./commands/help.js'),
+  hug = require('./commands/hug.js');
 
 botBE.login(process.env.BOT_TOKEN);
 
@@ -18,8 +19,7 @@ botBE.on('ready', function() {
     console.log('\x1b[36m%s\x1b[0m', `Feelings has connected to ${botBE.guilds.size} guilds with ${botBE.users.size} users`);
     botBE.user.setActivity('/help for help || Everything is going to be okay, I promise <3');
   });
-
-botBE.on('message', async function (msg) {
+ botBE.on('message', async function (msg) {
     //Ignores all messages not starting with the prefix and by the bot himself
     if (!msg.content.startsWith(config.prefix) || msg.author.bot) return;
 
@@ -79,4 +79,4 @@ botBE.on('guildCreate', async function(guild) {
 
 botBE.on('guildDelete', async function(guild) {
   console.log('\x1b[36m%s\x1b[0m', `Breathe Easy has left ${guild.name}`);
-});
+}); 
