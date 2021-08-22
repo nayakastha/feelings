@@ -10,14 +10,19 @@ const botBE = new Client({
 });
 
 //Importing the discord library and meta data and initialising a botBE
-const admin = require("./commands/admin.js"),
-  breathe = require("./commands/breathe");
-const intro = require("./commands/intro"),
-  ping = require("./commands/ping");
+
+const admin = require('./commands/admin.js'),
+  breathe = require('./commands/breathe.js'),
+  encourage = require('./commands/encourage.js'),
+  count = require('./commands/count.js'),
+  help = require('./commands/help.js'),
+  hug = require('./commands/hug.js');
+
 
 botBE.login(process.env.BOT_TOKEN);
 
 // ready for use after the bot is logged in
+
 botBE.on("ready", function () {
   console.log("\x1b[36m%s\x1b[0m", `Feelings has logged in`);
   console.log(
@@ -35,6 +40,7 @@ botBE.on("message", async function (msg) {
 
   //declare's the args variable and command variable
   const args = msg.content.slice(config.prefix.length).split(" ");
+
   const command = args.shift().toLowerCase();
 
   switch (command) {
@@ -44,8 +50,10 @@ botBE.on("message", async function (msg) {
     case "ping": //A simple ping command
       ping(botBE.ping, msg.author.tag, msg.guild, msg.channel);
       break;
-    case "help": //Sends a help block
-      //  help(msg.author.tag, msg.guild, msg.channel);
+
+    case 'help': //Sends a help block
+      help(msg.author.tag, msg.guild, msg.channel);
+
       break;
     case "feedback": //Sends feedback to me via the bot
       // feedback(msg.content.slice(command.length + 1), msg.author.tag, msg.guild, msg.channel, botBE.guilds.get('560014471599489046').channels.get('627248802084159507'));
@@ -71,6 +79,7 @@ botBE.on("message", async function (msg) {
         );
       }
       break;
+
     case "prompt": //Sends a visualtion prompt
       //prompt(args[0], msg.author.tag, msg.guild, msg.channel);
       break;
@@ -78,29 +87,34 @@ botBE.on("message", async function (msg) {
       // request(msg.content.slice(command.length + 1), msg.author.tag, msg.guild, msg.channel, botBE.guilds.get('560014471599489046').channels.get('627342241253425153'));
       break;
     case "breathe":
+
       breathe(msg.author.tag, msg.guild, msg.channel);
       break;
     case "count": //Sends a counting exercise
       // count(msg.author.tag, msg.guild, msg.channel);
       break;
-    case "hug": //Sends a hug to people you mention
-      // hug(msg.mentions.members.first(), msg.author.tag, msg.guild, msg.author.username, msg.channel, botBE.user.id);
-      break;
 
-    case "encouragement":
-      //  encourage(msg.author.tag, msg.guild, msg.channel);
+    case 'hug': //Sends a hug to people you mention
+      hug(msg.mentions.members.first(), msg.author.tag, msg.guild, msg.author.username, msg.channel, botBE.user.id);
+      break;
+    case 'encouragement':
+      encourage(msg.author.tag, msg.guild, msg.channel);
+
       break;
     case "reddit": //Sends cat images
       // reddit(args[0], msg.author.tag, msg.guild, msg.channel);
       break;
   }
   return;
+
 });
 
 botBE.on("guildCreate", async function (guild) {
   console.log("\x1b[36m%s\x1b[0m", `Breathe Easy has joined ${guild.name}`);
 });
 
-botBE.on("guildDelete", async function (guild) {
-  console.log("\x1b[36m%s\x1b[0m", `Breathe Easy has left ${guild.name}`);
-});
+
+botBE.on('guildDelete', async function(guild) {
+  console.log('\x1b[36m%s\x1b[0m', `Breathe Easy has left ${guild.name}`);
+}); 
+
