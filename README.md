@@ -7,7 +7,7 @@ For the StarHacks Hackathon - https://starhacks.devpost.com/
 # Project Title: Feeling - Helping you on your journey
 
 <p align="center">
-<img src="mentalquestlogo.png" width="300" height="300" >
+<img src="fe.jpg" width="300" height="300" >
 </p>
 
 # Description:
