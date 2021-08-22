@@ -1,6 +1,8 @@
 # The Quandary of Feelings
 Feelings is a discord bot that helps people to calm down and relax.
 
+[![Youtube Video](https://github.com/nayakastha/feelings/blob/main/assets/feelings.png)](https://youtu.be/7WSuPucEq54)
+
 # Aimed for- Creatica-2021
 <p align="center">
 <img src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/challenge_photos/001/602/371/datas/full_width.png" width="1100" height="200" >
