@@ -45,12 +45,10 @@ botBE.on('message', async function (msg) {
         console.log('\x1b[35m%s\x1b[0m', `${msg.guild}:${msg.author.tag} Admin command refuse`);
       }
       break;
-    case 'prompt': //Sends a visualtion prompt
+    case 'quiz': //Sends a visualtion quiz
       //prompt(args[0], msg.author.tag, msg.guild, msg.channel);
       break;
-    case 'request': //Allows users to send requests for prompts to me
-     // request(msg.content.slice(command.length + 1), msg.author.tag, msg.guild, msg.channel, botBE.guilds.get('560014471599489046').channels.get('627342241253425153'));
-      break;
+
     case 'breathe':
       breathe(msg.author.tag, msg.guild, msg.channel);
       break;
