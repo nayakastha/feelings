@@ -11,9 +11,8 @@ const botBE = new Client({
 
 //Importing the discord library and meta data and initialising a botBE
 
-const admin = require('./commands/admin.js'),
-  intro = require('./commands/intro.js'),
-  ping = require('./commands/ping.js'),
+const 
+  intro = require('./commands/intro.js'),  
   help = require('./commands/help.js'),
   feedback = require('./commands/feedback.js'),
   pat = require("./commands/pat.js"),
@@ -47,24 +46,20 @@ botBE.on("message", async function (msg) {
 
   //declare's the args variable and command variable
   const args = msg.content.slice(config.prefix.length).split(" ");
-
   const command = args.shift().toLowerCase();
 
   switch (command) {
     case "welcome":
       intro(msg.author.tag, msg.guild.name, msg.channel);
       break;
-    
-    case "ping": //A simple ping command
-      ping(botBE.ping, msg.author.tag, msg.guild, msg.channel);
-      break;
+       
 
     case 'help': //Sends a help block
       help(msg.author.tag, msg.guild, msg.channel,);
       break;
     
     case "feedback": //Sends feedback to me via the bot
-      feedback(msg.content.slice(command.length + 1), msg.author.tag, msg.guild, msg.channel, botBE.guilds.get('560014471599489046').channels.get('627248802084159507'));
+      feedback(msg.content.slice(command.length + 1), msg.author.tag, msg.guild, msg.channel,);
       break;
     
     case "admin": //Admin commands
