@@ -1,8 +1,8 @@
 module.exports = async function(tag, guild, channel) {
 
     try {
-      const discord = require('discord.js'),
-        time = new Date();
+      const discord = require('discord.js');
+        
      
   
       console.log('\x1b[32m%s\x1b[0m', `${guild}:\n${tag} intro command success\n`);

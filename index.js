@@ -102,7 +102,7 @@ botBE.on("message", async function (msg) {
       break;
     
     
-    case 'encouragement':
+    case 'encourage':
       encourage(msg.author.tag, msg.guild, msg.channel);
       break;
     
@@ -111,7 +111,7 @@ botBE.on("message", async function (msg) {
       break;
     
     case "reddit": //Sends cat images
-      reddit(args[0], msg.author.tag, msg.guild, msg.channel);
+      reddit(args[1], msg.author.tag, msg.guild, msg.channel);
       break;
   }
   return;

@@ -5,8 +5,8 @@ module.exports = async function(sub, tag, guild, channel) {
     try {
       const discord = require('discord.js'),
         axios = require('axios'),
-        blockMaker = require('../Utils/BreatheEasy_BlockMaker.js'),
-        time = new Date();
+        blockMaker = require('../blocks/blockmaker.js');
+       
       //importing libraries
   
       let redLink,
@@ -22,7 +22,7 @@ module.exports = async function(sub, tag, guild, channel) {
           randomNumber = Math.floor(Math.random() * posts.length);
   
           channel.send(blockMaker(posts[randomNumber].data.title, posts[randomNumber].data.author, posts[randomNumber].data.url, 'r/cats'));
-          console.log('\x1b[32m%s\x1b[0m', `${time}:\n${guild}:\n${tag} Reddit command success ${sub}\n`);
+          console.log('\x1b[32m%s\x1b[0m', `${guild}:\n${tag} Reddit command success ${sub}\n`);
           break;
         case 'kittens':
         case 'kitten':
@@ -31,7 +31,7 @@ module.exports = async function(sub, tag, guild, channel) {
           randomNumber = Math.floor(Math.random() * posts.length);
   
           channel.send(blockMaker(posts[randomNumber].data.title, posts[randomNumber].data.author, posts[randomNumber].data.url, 'r/kittens'));
-          console.log('\x1b[32m%s\x1b[0m', `${time}:\n${guild}:\n${tag} Reddit command success ${sub}\n`);
+          console.log('\x1b[32m%s\x1b[0m', `${guild}:\n${tag} Reddit command success ${sub}\n`);
           break;
         case 'cromch':
           redLink = await axios.get(`https://www.reddit.com/r/cromch/top.json?t=all&limit=1000`);
@@ -39,7 +39,7 @@ module.exports = async function(sub, tag, guild, channel) {
           randomNumber = Math.floor(Math.random() * posts.length);
   
           channel.send(blockMaker(posts[randomNumber].data.title, posts[randomNumber].data.author, posts[randomNumber].data.url, 'r/cromch'));
-          console.log('\x1b[32m%s\x1b[0m', `${time}:\n${guild}:\n${tag} Reddit command success ${sub}\n`);
+          console.log('\x1b[32m%s\x1b[0m', `${guild}:\n${tag} Reddit command success ${sub}\n`);
           break;
         case 'catnip':
           redLink = await axios.get(`https://www.reddit.com/r/holdmycatnip/top.json?t=all&limit=1000`);
@@ -48,7 +48,7 @@ module.exports = async function(sub, tag, guild, channel) {
   
           channel.send(blockMaker(posts[randomNumber].data.title, posts[randomNumber].data.author, NaN, 'r/holdmycatnip'));
           channel.send(posts[randomNumber].data.url);
-          console.log('\x1b[32m%s\x1b[0m', `${time}:\n${guild}:\n${tag} Reddit command success ${sub}\n`);
+          console.log('\x1b[32m%s\x1b[0m', `${guild}:\n${tag} Reddit command success ${sub}\n`);
           break;
         case 'dogs':
         case 'dog':
@@ -57,7 +57,7 @@ module.exports = async function(sub, tag, guild, channel) {
           randomNumber = Math.floor(Math.random() * posts.length);
   
           channel.send(blockMaker(posts[randomNumber].data.title, posts[randomNumber].data.author, posts[randomNumber].data.url, 'r/DOG'));
-          console.log('\x1b[32m%s\x1b[0m', `${time}:\n${guild}:\n${tag} Reddit command success ${sub}\n`);
+          console.log('\x1b[32m%s\x1b[0m', `${guild}:\n${tag} Reddit command success ${sub}\n`);
           break;
         case 'puppies':
         case 'puppy':
@@ -66,7 +66,7 @@ module.exports = async function(sub, tag, guild, channel) {
           randomNumber = Math.floor(Math.random() * posts.length);
   
           channel.send(blockMaker(posts[randomNumber].data.title, posts[randomNumber].data.author, posts[randomNumber].data.url, 'r/puppies'));
-          console.log('\x1b[32m%s\x1b[0m', `${time}:\n${guild}:\n${tag} Reddit command success ${sub}\n`);
+          console.log('\x1b[32m%s\x1b[0m', `${guild}:\n${tag} Reddit command success ${sub}\n`);
           break;
         case 'wholesome':
           redLink = await axios.get(`https://www.reddit.com/r/wholesomememes/top.json?t=all&limit=1000`);
@@ -74,7 +74,7 @@ module.exports = async function(sub, tag, guild, channel) {
           randomNumber = Math.floor(Math.random() * posts.length);
   
           channel.send(blockMaker(posts[randomNumber].data.title, posts[randomNumber].data.author, posts[randomNumber].data.url, 'r/Wholesome Memes'));
-          console.log('\x1b[32m%s\x1b[0m', `${time}:\n${guild}:\n${tag} Reddit command success ${sub}\n`);
+          console.log('\x1b[32m%s\x1b[0m', `${guild}:\n${tag} Reddit command success ${sub}\n`);
           break;
         default: //Sends a block with all the keywords
           const keywords = new discord.RichEmbed();
@@ -84,13 +84,11 @@ module.exports = async function(sub, tag, guild, channel) {
           keywords.setColor(0x06b890);
           keywords.setFooter('Breathe Easy');
           channel.send(keywords);
-          console.log('\x1b[32m%s\x1b[0m', `${time}:\n${guild}:\n${tag} Reddit command success keywords\n`)
+          console.log('\x1b[32m%s\x1b[0m', `\n${guild}:\n${tag} Reddit command success keywords\n`)
       }
     } catch {
-      channel.send('I wasn\'t able to provide a post from that subreddit however you can still see a kitten!', {
-        files: ['./Misc/KittenMouse.gif']
-      });
-      console.log('\x1b[31m%s\x1b[0m', `${time}:\n${guild}:\n${tag} Reddit command fail\n`);
+      channel.send('I wasn\'t able to provide a post from that subreddit however you can still see a kitten!');
+      console.log('\x1b[31m%s\x1b[0m', `${guild}:\n${tag} Reddit command fail\n`);
       return;
     }
   }

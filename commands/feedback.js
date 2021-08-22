@@ -11,9 +11,10 @@ module.exports = async function(feedback, tag, guild, channelFrom) {
         feedbackBlock.setTitle(`Feedback from ${tag}`);
         feedbackBlock.setThumbnail(`https://i.imgur.com/HkRBcAV.png`);
         feedbackBlock.setColor(0x660066);
-        feedbackBlock.setDescription(feedback);
+       
         channelFrom.send('I\'ll deliver this straight to Admins! *Feelings runs off with your letter*');
-        channelTo.send(feedbackBlock);
+        channelTo.send({ feedbackBlock });
+        
         console.log('\x1b[32m%s\x1b[0m', `${guild}:\n${tag} Feedback deliver success\n`);
         return;
       } else {

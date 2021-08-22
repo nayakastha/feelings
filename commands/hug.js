@@ -12,7 +12,7 @@ module.exports = async function(mention, tag, guild, username, channel, breatheI
           'https://media.giphy.com/media/yPjxAzSkVFgZO/giphy.gif',
          ];
 
-
+  
       channel.send(`${username} has hugged ${mention}`, {
         files: [hugs[Math.floor(Math.random() * hugs.length)]]
       });
@@ -23,7 +23,7 @@ module.exports = async function(mention, tag, guild, username, channel, breatheI
     return;
   } catch {
     channel.send(`*Breathe Easy looks at you with confusion*\n\nI\'m really sorry i\'m having trouble understanding you. Please follow hug with a mention, For example \"/hug <@${breatheID}>\"`);
-    console.log('\x1b[31m%s\x1b[0m', `${time}:\n${guild}:\n${tag} Hug command fail\n`);
+    console.log('\x1b[31m%s\x1b[0m', `${guild}:\n${tag} Hug command fail\n`);
     return;
   }
 }

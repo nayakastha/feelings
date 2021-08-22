@@ -8,7 +8,7 @@ module.exports = async function(mention, tag, guild, username, channel,breatheID
         
   
         channel.send(`${username} has patted ${mention} softly`, );
-        console.log('\x1b[32m%s\x1b[0m', `${time}:\n${guild}:\n${tag} & ${mention} Pat command success`);
+        console.log('\x1b[32m%s\x1b[0m', `${guild}:\n${tag} & ${mention} Pat command success`);
         return;
       } else {
         throw error

@@ -3,23 +3,19 @@
 module.exports = async function(tag, guild, channel) {
 
     try {
-      const discord = require('discord.js'),
-      time = new Date(),
-      { MessageEmbed, MessageAttachment } = require('discord.js');
-
-      const file = new MessageAttachment('');
-
+      const discord = require('discord.js');   
+ 
       console.log('\x1b[32m%s\x1b[0m', `${guild}:\n${tag} Help command success\n`);
      
       const embed = new MessageEmbed()
-          .setColor('#0099ff')
-          .setTitle('Feelings Bot')
-          .setThumbnail('https://github.com/nayakastha/feelings/blob/main/assets/feelings.png')
-          .setImage('https://github.com/nayakastha/feelings/blob/main/assets/feelings.png')
-          .setaddField('Commands','Prefix /\nWelcome\nPing\nHelp\nFeedback\nAdmin\nCount\nBreathe\nHugn\nPat\nEncouragement\nLaugh\nReddit', true)
-          .addBlankField()
-          .setaddField('Description', 'Feelings is a discord bot to help people to calm down and relax', true)
-        .setFooter('Feelings');
+        .setColor('#0099ff')        
+        .setTitle('Feelings is a discord bot to help people to calm down and relax')
+        .setFooter('Feelings')
+        .setTimestamp()
+        .setImage('https://github.com/nayakastha/feelings/blob/main/assets/feelings.png')
+        .setDescrpition('Commands', 'Prefix /\nWelcome\nPing\nHelp\nFeedback\nAdmin\nCount\nBreathe\nHugn\nPat\nEncouragement\nLaugh\nReddit', true);
+          
+        
       console.log("works");
       channel.send({ embed });
       return;
